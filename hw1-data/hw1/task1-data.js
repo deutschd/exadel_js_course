@@ -78,10 +78,3 @@ const users = [
         registrationDate: '12.10.2021'
     },
 ];
-
-users.forEach(o => {
-    if (o.registrationDate === '09.10.2019') {
-        console.log(o.firstName + ' ' + o.lastName);
-    }
-});
-
