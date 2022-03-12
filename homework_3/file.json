@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Brown eggs",
+        "type": "dairy",
+        "price_usd": 30.1
+    },
+    {
+        "title": "Sweet fresh stawberry",
+        "type": "fruit",
+        "price_usd": 31.45
+    },
+    {
+        "title": "Asparagus",
+        "type": "vegetable",
+        "price_usd": 20.95
+    },
+    {
+        "title": "Green smoothie",
+        "type": "dairy",
+        "price_usd": 19.68
+    }
+]
