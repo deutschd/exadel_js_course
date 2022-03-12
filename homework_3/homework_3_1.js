@@ -7,10 +7,16 @@ fetch("test.json")
   .then(response => response.json())
   .then(json => console.log(json));
 */
-import fetch from 'node-fetch';
+const jsonData= require('./task1-data.json'); 
+console.log(jsonData);
 
-const response = await fetch('https://api.github.com/users/github');
-const data = await response.json();
+const USD_Formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+});
+const EURO_Formatter = new Intl.NumberFormat('it-IT', {
+  style: 'currency',
+  currency: 'EUR'
+})
 
-console.log(data);
-
+formatter1.price.format(2500); /* $2,500.00 */
