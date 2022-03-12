@@ -1,11 +1,11 @@
 class Zoo {
-    constructor(address, area, establishedDate, ticketPrice){
+    constructor(address, area, establishedDate, ticketPrice, workers, animals){
         this.address = address;
         this.area = area;
         this.establishedDate = establishedDate;
         this.ticketPrice = ticketPrice;
-        this.workers = [];
-        this.animals = [];
+        this.workers = workers;
+        this.animals = animals;
     }
     getInfo(){
         return `The Address of Zoo is ${this.address}. It is located in ${this.area} and established in ${this.establishedDate}.
@@ -22,20 +22,16 @@ class Zoo {
     }
 }
 class Animal extends Zoo {
-    constructor(area, type, color, placeOfOrigin){
+    constructor(area, type, color, placeOfOrigin, weight, height){
         super(area)
         this.type = type;
         this.color = color;
         this.placeOfOrigin = placeOfOrigin;  
-        this.weight = [];
-        this.height = [];      
+        this.weight = weight;
+        this.height = height;      
     }
-    setWeight(kgs){
-        if(typeof kgs == 'number'){
-            this.weight = kgs
-        } else{
-            throw new Error('Weight value should be a number')
-        }
+    getInfoAnimal(){
+        return `The animal is ${this.type}. Its place of origin is ${this.placeOfOrigin}. Is it domestic? Of course - ${this.isSafeToPet}. It is ${this.weight} kgs.`
     }
 }
 
@@ -76,3 +72,5 @@ class Worker extends Animal {
     }
 }
 
+const tiger = new CatLike ('Wild', 'Amazonia', 'No, definitely no',123) // не понимаю в чём проблема но постараюсь доделать
+console.log(tiger.getInfoAnimal())
