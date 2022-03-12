@@ -33,3 +33,9 @@ class Snakes extends Animal {
         this.isPoisonous = isPoisonous;
     }
 }
+
+var storage = {};
+storage.Snakes = new Class();
+//since 'storage.instance' is your only reference to the object, whenever you wanted to destroy do this:
+storage.Snakes = null;
+console.log(Snakes)
